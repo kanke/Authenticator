@@ -31,10 +31,10 @@ public class AuthenticatorResource {
             String userName = values[0];
             String password = values[1];
 
-            if (userName.isEmpty())
+            if (StringUtils.isBlank(userName))
                 return Response.ok(new StandardResponse(StandardResponse.FAILURE, "username cannot be empty!")).build();
 
-            if (password.isEmpty())
+            if (StringUtils.isBlank(password))
                 return Response.ok(new StandardResponse(StandardResponse.FAILURE, "password cannot be empty!")).build();
 
             privateKey = TokenHelper.getInstance().generatePrivateKey(userName, password);

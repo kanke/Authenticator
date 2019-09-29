@@ -9,7 +9,7 @@ import javax.ws.rs.core.MediaType;
 public class HealthCheckResource {
 
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
     public String getStatus() {
         return "Authenticator app is up and running :-)";
     }

@@ -1,8 +1,9 @@
-package org.kanke;
+package org.kanke.filter;
 
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.MalformedJwtException;
 import org.apache.commons.lang3.StringUtils;
+import org.kanke.Authenticator;
 import org.kanke.response.StandardResponse;
 import org.kanke.response.UnAuthorizedResponse;
 import org.kanke.util.TokenHelper;

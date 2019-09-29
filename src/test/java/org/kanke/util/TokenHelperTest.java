@@ -12,7 +12,7 @@ import org.powermock.reflect.Whitebox;
 
 import java.util.Date;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 import static org.kanke.util.TokenHelper.getInstance;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;

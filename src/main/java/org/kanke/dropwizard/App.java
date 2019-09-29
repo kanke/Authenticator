@@ -5,7 +5,7 @@ import io.dropwizard.Configuration;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import lombok.extern.slf4j.Slf4j;
-import org.kanke.AuthorizationFilter;
+import org.kanke.filter.AuthorizationFilter;
 import org.kanke.resource.HealthCheckResource;
 import org.kanke.resource.WelcomeResource;
 import org.kanke.resource.AuthenticatorResource;

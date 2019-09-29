@@ -8,9 +8,10 @@
 3. The language must be Java and you can use any framework/libraries such as Spring Boot, Dropwizard, Jackson, etc.
 4. Don’t worry about persistence as data can be handled solely in memory.
 5. You should make your code production-ready as much as possible.
-6. The project
-
- java -jar target/Authenticator-1.0-SNAPSHOT.jar server
+6. The project should have a brief description of how to run the service and interact with its API.
+7. It shouldn’t take you more than a couple of hours to complete the exercise as this is going to be the basis for your face-to-face interview.
+8. When done, please send us your project via email to recruitment@callsign.com.
+9. Note: It is forbidden to upload this assignment to any public repository or website, such as Github, Bitbucket, etc.
 
 #  :bowtie: About this application #
 A simple RESTful API that provides the user with the functionality of authentication. The API is easy to understand and integrate with. It uses Dropwizard and JWTokens for 
@@ -21,7 +22,7 @@ Authentication and Authorization.
 > :computer: -  Clone to computer
 
 >  🧭 -  Navigate to root project directory of project i.e `cd /{path-to-project}`
->
+
 > 🧹 -  Run `mvn clean install`
 
 > :package: - Run  `mvn package`

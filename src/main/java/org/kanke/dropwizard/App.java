@@ -6,6 +6,7 @@ import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import lombok.extern.slf4j.Slf4j;
 import org.kanke.AuthorizationFilter;
+import org.kanke.resource.HealthCheckResource;
 import org.kanke.resource.WelcomeResource;
 import org.kanke.resource.AuthenticatorResource;
 
@@ -23,6 +24,8 @@ public class App extends Application<Configuration> {
         final TemplateHealthCheck healthCheck =
                 new TemplateHealthCheck("config.yml");
         environment.healthChecks().register("Authenticator", healthCheck);
+        final HealthCheckResource healthCheckResource = new HealthCheckResource();
+        environment.jersey().register(healthCheckResource);
 
         //****** Dropwizard REST Endpoints ***********//
         log.info("Registering REST resources");

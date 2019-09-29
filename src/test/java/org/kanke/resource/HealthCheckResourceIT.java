@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class HealthCheckResourceIT extends BaseTest {
+public class HealthCheckResourceIT extends BaseResourceTest {
 
     @Test
     public void shouldCheckApplicationHealth() {

@@ -11,7 +11,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Setter
 @ToString
 public class AuthenticatedResponse extends StandardResponse {
-
     private String privateKey;
 
     public AuthenticatedResponse(int status, String message, String privateKey) {

@@ -32,11 +32,11 @@ public class TokenHelper {
                 .compact();
     }
 
-    public void claimKey(String apiKey) throws ExpiredJwtException, MalformedJwtException {
+    public void claimKey(String privateKey) throws ExpiredJwtException, MalformedJwtException {
         Jwts
                 .parser()
                 .setSigningKey(key)
-                .parseClaimsJws(apiKey);
+                .parseClaimsJws(privateKey);
     }
 
     private Date getExpirationDate() {
@@ -44,5 +44,4 @@ public class TokenHelper {
         long expMilliSeconds = TimeUnit.MINUTES.toMillis(EXPIRATION_LIMIT);
         return new Date(currentTimeInMillis + expMilliSeconds);
     }
-
 }

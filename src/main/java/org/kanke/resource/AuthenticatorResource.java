@@ -16,7 +16,6 @@ import java.util.Base64;
 
 @Path("/auth")
 public class AuthenticatorResource {
-
     private static final String BASIC = "Basic";
     private static final String LOWERCASE_BASIC = "basic";
     private static final String REGEX = ":";

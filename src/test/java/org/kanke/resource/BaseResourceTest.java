@@ -5,7 +5,7 @@ import org.junit.BeforeClass;
 
 import static io.restassured.RestAssured.*;
 
-public class BaseTest {
+public class BaseResourceTest {
 
     @BeforeClass
     public static void setup() {

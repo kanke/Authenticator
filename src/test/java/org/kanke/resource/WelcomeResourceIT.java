@@ -4,14 +4,10 @@ import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import org.junit.jupiter.api.Test;
 
-import java.time.Clock;
-import java.time.Instant;
-import java.time.ZoneId;
-
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class WelcomeResourceIT extends BaseTest {
+public class WelcomeResourceIT extends BaseResourceTest {
 
     @Test
     public void shouldAuthorizeUserToSeeWelcomeMessage() {

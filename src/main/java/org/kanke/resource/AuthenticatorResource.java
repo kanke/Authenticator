@@ -36,7 +36,7 @@ public class AuthenticatorResource {
 
             privateKey = TokenHelper.getInstance().generatePrivateKey(userName, password);
         }
-        return Response.ok(new AuthenticatedResponse(StandardResponse.SUCCESS, "You are authenticated successfully. Private key will be valid for 30 minutes", privateKey)).build();
+        return Response.ok(new AuthenticatedResponse(StandardResponse.SUCCESS, "You are authenticated successfully. Private key will be valid for 15 minutes", privateKey)).build();
     }
 
     private String[] getCredentials(String authorization) {

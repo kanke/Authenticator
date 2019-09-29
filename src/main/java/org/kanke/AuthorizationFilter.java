@@ -38,7 +38,6 @@ public class AuthorizationFilter implements ContainerRequestFilter {
                 throw new WebApplicationException(getUnAuthorizeResponse(PRIVATE_KEY + " is not correct"));
             }
         }
-
     }
 
     private Response getUnAuthorizeResponse(String message) {

@@ -52,6 +52,9 @@ Authentication and Authorization.
 ![Imgur](https://imgur.com/reioWMS.png)
 
 
+![Imgur](https://imgur.com/GNiQrZ9.png)
+
+
 ##  Original Problem Statement ##
 
 1. Design and implement a simple API that provides the user with the functionality of authentication.

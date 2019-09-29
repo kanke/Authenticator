@@ -16,6 +16,6 @@ public class WelcomeResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response displayAuthorizationMessage() {
-        return Response.ok(new StandardResponse(StandardResponse.SUCCESS, "Welcome!, You have now been Authorized")).build();
+        return Response.ok(new StandardResponse(StandardResponse.SUCCESS, "Welcome! You have now been Authorized")).build();
     }
 }

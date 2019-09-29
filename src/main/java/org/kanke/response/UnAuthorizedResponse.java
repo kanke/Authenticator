@@ -1,6 +1,7 @@
 package org.kanke.response;
 
 import lombok.ToString;
+
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement

@@ -8,7 +8,9 @@ import lombok.ToString;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-@Getter @Setter @ToString
+@Getter
+@Setter
+@ToString
 public class StandardResponse {
 
     public static final int FAILURE = 0;
@@ -22,11 +24,4 @@ public class StandardResponse {
         this.status = status;
     }
 
-//    @Override
-//    public String toString() {
-//        return "StandardResponse {" +
-//                "message='" + message + '\'' +
-//                ", status=" + status +
-//                '}';
-//    }
 }

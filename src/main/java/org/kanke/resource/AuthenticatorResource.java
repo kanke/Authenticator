@@ -11,19 +11,22 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
 @Path("/auth")
 public class AuthenticatorResource {
 
+    private static final String BASIC = "Basic";
+    private static final String LOWERCASE_BASIC = "basic";
+    private static final String REGEX = ":";
+
     @POST
     @Produces(MediaType.APPLICATION_JSON)
-    public Response authenticateUser(@HeaderParam("Authorization") String authorization) throws UnsupportedEncodingException {
+    public Response authenticateUser(@HeaderParam("Authorization") String authorization) {
         String privateKey = null;
 
-        if (StringUtils.isNotBlank(authorization) && authorization.toLowerCase().startsWith("basic")) {
+        if (StringUtils.isNotBlank(authorization) && authorization.toLowerCase().startsWith(LOWERCASE_BASIC)) {
             final String[] values = getCredentials(authorization);
             String userName = values[0];
             String password = values[1];
@@ -40,9 +43,9 @@ public class AuthenticatorResource {
     }
 
     private String[] getCredentials(String authorization) {
-        String base64Credentials = authorization.substring("Basic".length()).trim();
+        String base64Credentials = authorization.substring(BASIC.length()).trim();
         byte[] credentialsDecoded = Base64.getDecoder().decode(base64Credentials);
         String credentials = new String(credentialsDecoded, StandardCharsets.UTF_8);
-        return credentials.split(":", 2);
+        return credentials.split(REGEX, 2);
     }
 }

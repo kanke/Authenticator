@@ -61,3 +61,8 @@ Authentication and Authorization.
 
 
 ##  Future Implementations ##
+1. Version API - Format versions should go in headers—Accept-Version and Content-Version—in the request and response
+2. Containerised application - Using maven plugin or docker file
+3. Access policies - Restrictions from certain networks, rate limits, guidance of caching of API call content
+   etcetera
+4. Add terms & conditions and legal obligations
